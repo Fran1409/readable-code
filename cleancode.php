@@ -1,26 +1,11 @@
 <?php
 
-//fw = client
-//orderPizza = orderPizza
-//pizzatype = pizzaType
-//p = price
-//calc_cts = calculateCosts
-//p_type = pizzaType
-
-
 function orderPizza($pizzaType, $client) {
 
-    //$type = $pizzaType;
-    //echo 'Creating new order... <br>';
-    //$toPrint = 'A ';
-    //$toPrint .= $pizzatype;
     $address = getAddress($client);
     $price = calculateCosts($pizzaType);
 
     echo 'Creating new order... <br>A '.$pizzaType.' pizza should be sent to ' . $client . '. <br>The address: '.$address.'<br>The bill is €'.$price.'.<br> Order finished.<br><br>';
-    //echo $toPrint; echo '<br>';
-    //echo $toPrint.'The bill is €'.$price.'.<br> Order finished.<br><br>';
-    //echo "Order finished.<br><br>";
 }
 
 function getAddress($client) {
@@ -34,14 +19,6 @@ function getAddress($client) {
     }
     return $address;
 }
-
-/* function total_price($price) {
-    return $price;
-} */
-
-/* function test($pizzaType) {
-    echo "Test: type is {$pizzaType}. <br>";
-} */
 
 function calculateCosts($pizzaType) {
     $cost = 0;
@@ -59,21 +36,12 @@ function calculateCosts($pizzaType) {
     return $cost;
 }
 
-/* function ordr_piz_all() {
-    $test= 0;
-    orderPizza('calzone', 'koen');
-    orderPizza('marguerita', 'manuele');
-    orderPizza('golden', 'students');
-} */
-
 function make_Allhappy($do_it) {
     if ($do_it) {
         orderPizza('calzone', 'koen');
         orderPizza('marguerita', 'manuele');
         orderPizza('golden', 'students');
-    } //else {
-        // Should not do anything when false
-    //}
+    } 
 }
 
 make_Allhappy(true);
