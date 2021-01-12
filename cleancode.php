@@ -25,19 +25,19 @@ function orderPizza($pizzaType, $client) {
         $address = 'BeCode office';
     }
 
-    $toPrint .=   ' pizza should be sent to ' . $client . ". <br>The address: {$address}.";
-    echo $toPrint; echo '<br>';
-    echo'The bill is €'.$price.'.<br>';
-    echo "Order finished.<br><br>";
+    $toPrint .= ' pizza should be sent to ' . $client . '. <br>The address: '.$address.'<br>';
+    //echo $toPrint; echo '<br>';
+    echo $toPrint.'The bill is €'.$price.'.<br> Order finished.<br><br>';
+    //echo "Order finished.<br><br>";
 }
 
 /* function total_price($price) {
     return $price;
 } */
 
-function test($pizzaType) {
+/* function test($pizzaType) {
     echo "Test: type is {$pizzaType}. <br>";
-}
+} */
 
 function calculateCosts($pizzaType) {
     $cost = 'unknown';
