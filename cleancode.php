@@ -5,11 +5,15 @@ function orderPizza($pizzaType, $client) {
     $address = getAddress($client);
     $price = calculateCosts($pizzaType);
 
-    echo 'Creating new order... <br>A '.$pizzaType.' pizza should be sent to ' . $client . '. <br>The address: '.$address.'<br>The bill is €'.$price.'.<br> Order finished.<br><br>';
+    echo 'Creating new order... <br>A '.$pizzaType.' pizza should be sent to ' . $client . '. <br>';
+    echo 'The address: '.$address.'<br>';
+    echo 'The bill is €'.$price.'.<br>';
+    echo 'Order finished.<br><br>';
 }
 
 function getAddress($client) {
     $address = 'unknown';
+    
     if($client == 'koen'){
         $address = 'a yacht in Antwerp';
     } else if ($client == 'manuele'){
@@ -25,11 +29,14 @@ function calculateCosts($pizzaType) {
 
     if ($pizzaType == 'marguerita') {
         $cost = 5;
-    } else if ($pizzaType == 'golden') {
+    }
+    if ($pizzaType == 'golden') {
         $cost = 100;
-    } else if ($pizzaType == 'calzone') {
+    } 
+    if ($pizzaType == 'calzone') {
         $cost = 10;
-    } else if ($pizzaType == 'hawai') {
+    } 
+    if ($pizzaType == 'hawai') {
         throw new Exception('Computer says no');
     }
 
