@@ -11,9 +11,9 @@
 function orderPizza($pizzaType, $client) {
 
     //$type = $pizzaType;
-    echo 'Creating new order... <br>';
-    $toPrint = 'A ';
-    $toPrint .= $pizzaType;
+    //echo 'Creating new order... <br>';
+    //$toPrint = 'A ';
+    //$toPrint .= $pizzatype;
     $price = calculateCosts($pizzaType);
 
     $address = 'unknown';
@@ -25,9 +25,9 @@ function orderPizza($pizzaType, $client) {
         $address = 'BeCode office';
     }
 
-    $toPrint .= ' pizza should be sent to ' . $client . '. <br>The address: '.$address.'<br>';
+    echo 'Creating new order... <br>A '.$pizzaType.' pizza should be sent to ' . $client . '. <br>The address: '.$address.'<br>The bill is €'.$price.'.<br> Order finished.<br><br>';
     //echo $toPrint; echo '<br>';
-    echo $toPrint.'The bill is €'.$price.'.<br> Order finished.<br><br>';
+    //echo $toPrint.'The bill is €'.$price.'.<br> Order finished.<br><br>';
     //echo "Order finished.<br><br>";
 }
 
@@ -40,7 +40,7 @@ function orderPizza($pizzaType, $client) {
 } */
 
 function calculateCosts($pizzaType) {
-    $cost = 'unknown';
+    $cost = 0;
 
     if ($pizzaType == 'marguerita') {
         $cost = 5;
