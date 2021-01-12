@@ -67,9 +67,9 @@ function make_Allhappy($do_it) {
         orderPizza('calzone', 'koen');
         orderPizza('marguerita', 'manuele');
         orderPizza('golden', 'students');
-    } else {
+    } //else {
         // Should not do anything when false
-    }
+    //}
 }
 
 make_Allhappy(true);
