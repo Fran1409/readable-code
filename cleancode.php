@@ -14,8 +14,16 @@ function orderPizza($pizzaType, $client) {
     //echo 'Creating new order... <br>';
     //$toPrint = 'A ';
     //$toPrint .= $pizzatype;
+    $address = getAddress($client);
     $price = calculateCosts($pizzaType);
 
+    echo 'Creating new order... <br>A '.$pizzaType.' pizza should be sent to ' . $client . '. <br>The address: '.$address.'<br>The bill is €'.$price.'.<br> Order finished.<br><br>';
+    //echo $toPrint; echo '<br>';
+    //echo $toPrint.'The bill is €'.$price.'.<br> Order finished.<br><br>';
+    //echo "Order finished.<br><br>";
+}
+
+function getAddress($client) {
     $address = 'unknown';
     if($client == 'koen'){
         $address = 'a yacht in Antwerp';
@@ -24,11 +32,7 @@ function orderPizza($pizzaType, $client) {
     } else if ($client == 'students') {
         $address = 'BeCode office';
     }
-
-    echo 'Creating new order... <br>A '.$pizzaType.' pizza should be sent to ' . $client . '. <br>The address: '.$address.'<br>The bill is €'.$price.'.<br> Order finished.<br><br>';
-    //echo $toPrint; echo '<br>';
-    //echo $toPrint.'The bill is €'.$price.'.<br> Order finished.<br><br>';
-    //echo "Order finished.<br><br>";
+    return $address;
 }
 
 /* function total_price($price) {
