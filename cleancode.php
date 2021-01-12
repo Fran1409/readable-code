@@ -36,7 +36,7 @@ function calculateCosts($pizzaType) {
     return $cost;
 }
 
-function make_Allhappy($do_it) {
+function makeAllHappy($do_it) {
     if ($do_it) {
         orderPizza('calzone', 'koen');
         orderPizza('marguerita', 'manuele');
@@ -44,4 +44,4 @@ function make_Allhappy($do_it) {
     } 
 }
 
-make_Allhappy(true);
+makeAllHappy(true);
